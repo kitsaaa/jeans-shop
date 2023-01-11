@@ -1,0 +1,9 @@
+<div  class="container">
+    <div class="item-img">
+        <a [routerLink]="['/shop', item._id]"><img src={{item.images[0]}} alt="Image"></a>
+    </div>
+    <div class="item-description">
+        <div class="item-title">{{item.title}}</div>
+        <div class="item-price"><b>{{item.price}}$</b></div>
+    </div>
+</div>

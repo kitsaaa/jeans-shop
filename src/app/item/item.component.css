@@ -1,0 +1,28 @@
+.container {
+    width: clamp(6em, 1em + 10vw, 14em);
+    height: clamp(8em, 1em + 10vw, 16em);
+    margin: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-img img {
+    width: 100%;
+    max-height: clamp(4em, 1em + 10vw, 10em);
+}
+.item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%; 
+    }
+
+.item-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 1rem + 10vw, 1.5rem);
+}
