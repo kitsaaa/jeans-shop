@@ -5,3 +5,10 @@
     align-items: center;
     padding: 5em;
 }
+
+.img {
+
+}
+.img img {
+    max-height: 45vh;
+}
