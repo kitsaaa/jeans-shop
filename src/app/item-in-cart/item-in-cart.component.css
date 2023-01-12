@@ -1,0 +1,48 @@
+.container {
+    height: 13vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 7em;
+}
+
+
+
+
+.description {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.image img {
+    max-width: 100%;
+    max-height: clamp(2em, 1em + 10vw, 4em);
+}
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 40%; 
+    width: 30%;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+#remove {
+    width: fit-content;
+    margin-left: 1.3em;
+}
+
+#remove:hover {
+    border-bottom: 1px solid black;
+    /* text-decoration: underline; */
+}

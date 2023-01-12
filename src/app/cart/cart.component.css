@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50vw;
+}
+
+#title {
+    padding-top: 3em;
+}
+
+#item {
+    margin-left: 14em;
+}
+
+.hl {
+    margin-left: 4em;
+    height: 1px;
+    width: 46vw;
+    background-color: rgb(153, 153, 153);
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 46vw;
+    margin-left: 4em;
+}

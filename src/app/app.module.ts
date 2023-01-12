@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ItemDetailesComponent } from './item-detailes/item-detailes.component';
 import { CartComponent } from './cart/cart.component';
+import { ItemInCartComponent } from './item-in-cart/item-in-cart.component';
 
 
 
@@ -27,7 +28,8 @@ import { CartComponent } from './cart/cart.component';
     AboutComponent,
     ContactComponent,
     ItemDetailesComponent,
-    CartComponent
+    CartComponent,
+    ItemInCartComponent
   ],
   imports: [
     BrowserModule,

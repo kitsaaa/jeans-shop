@@ -3,7 +3,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 5em;
+    /* padding: 5em; */
+    padding-top: 4em;
 }
 
 .img {
@@ -11,4 +12,17 @@
 }
 .img img {
     max-height: 45vh;
+}
+
+.container button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.container button:hover {
+    border-bottom: 1px solid black;
 }
