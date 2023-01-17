@@ -18,5 +18,7 @@ export class ItemInCartComponent implements OnInit {
   onRemove() {
     this._cartService.removeItem(this.item);
     this._cartService.save();
+  
+
   }
 }

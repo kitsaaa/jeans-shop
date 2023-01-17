@@ -12,7 +12,7 @@
 
 
 .description {
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,7 +20,7 @@
 }
 
 .image img {
-    max-width: 100%;
+    max-width: 60%;
     max-height: clamp(2em, 1em + 10vw, 4em);
 }
 .image {
@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
     max-height: 40%; 
-    width: 30%;
+    width: 20%;
 }
 
 .price {

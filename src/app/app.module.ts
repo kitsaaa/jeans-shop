@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ItemDetailesComponent } from './item-detailes/item-detailes.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemInCartComponent } from './item-in-cart/item-in-cart.component';
+import { TotalPriceComponent } from './total-price/total-price.component';
 
 
 
@@ -29,7 +30,8 @@ import { ItemInCartComponent } from './item-in-cart/item-in-cart.component';
     ContactComponent,
     ItemDetailesComponent,
     CartComponent,
-    ItemInCartComponent
+    ItemInCartComponent,
+    TotalPriceComponent
   ],
   imports: [
     BrowserModule,
