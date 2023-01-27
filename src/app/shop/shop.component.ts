@@ -9,16 +9,30 @@ import { ItemsService } from '../items.service';
 export class ShopComponent implements OnInit {
 
   items: any;
+  canDisplayData: any;
 
   constructor(private _itemsService: ItemsService) { }
 
-  ngOnInit(): void {
-    for (let i = 0; i < 3; i++) {
-      this._itemsService.getPosts(1).subscribe(data => {
-        this.items = data;
-        console.log(data)
-      })
+  async ngOnInit(): Promise<void> {
+    // this.val = "none";
+    this.canDisplayData = false;
+    for (let i =0; i < 6; i++) {
+      this.items = this._itemsService.getPosts(1);
+      
     }
+    if (this.items) {
+      this.canDisplayData = true;
+    }
+    
+
+    // this._itemsService.getPosts(1)(data => {
+    //   setTimeout(() => {
+    //     this.items = data;
+    //     console.log(data)
+    //     this.canDisplayData = true;
+    //   }, 1000);
+
+    // })
     
   }
 

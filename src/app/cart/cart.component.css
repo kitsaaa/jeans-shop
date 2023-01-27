@@ -33,3 +33,9 @@
     width: 46vw;
     margin-left: 4em;
 }
+
+.cart {
+    /* border: 1px solid red; */
+    margin-left: 4em;
+    width: 60%;
+}

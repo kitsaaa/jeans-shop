@@ -8,14 +8,13 @@ import { Item } from './Item';
 })
 export class ItemsService {
 
-  data: any;
 
   constructor(private http: HttpClient) { }
 
-  getPosts(page: number): Observable<Item[]> {
-    this.data = this.http.get<Item[]>("https://jeans-shop-api.vercel.app/api/posts?page=" + page + "&perPage=100");
-    console.log(this.data);
-    return this.data;
+  async getPosts(page: number): Promise<Item[]> {
+    const data: any = await this.http.get<Item[]>("https://jeans-shop-api.vercel.app/api/posts?page=" + page + "&perPage=100").toPromise();
+    console.log(data)
+    return data;
   }
 
   getPostById(id: string): Observable<Item> {

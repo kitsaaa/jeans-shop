@@ -7,22 +7,94 @@
     padding-top: 4em;
 }
 
-.img {
+@keyframes cart {
+    0% {
+        opacity: 0%;
+    }
+
+    10% {
+        opacity: 100%;
+        font-size: 1rem;
+    }
+
+    20% {
+        opacity: 100%;
+        font-size: 1rem;
+    }
+
+    30% {
+        opacity: 100%;
+        font-size: 1rem;
+    }
+
+    40% {
+        opacity: 100%;
+        font-size: 1rem;
+
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    60% {
+        opacity: 100%;
+    }
+
+    70% {
+        opacity: 80%;
+        font-size: 1rem;
+    }
+
+    80% {
+        opacity: 50%;
+        font-size: 1rem;
+    }
+
+    90% {
+        opacity: 30%;
+        font-size: 1rem;
+    }
+
+    100% {
+        opacity: 0%;
+    }
 
 }
+
+.statusContainer {
+    width: 30em;
+    height: 3em;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#status {
+    animation-name: cart;
+    color: green;
+
+    animation-duration: 0.75s;
+
+    /* animation-timing-function: ease-in; */
+}
+
+
 .img img {
     max-height: 45vh;
 }
 
 .container button {
     background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
+
 .container button:hover {
     border-bottom: 1px solid black;
 }
@@ -32,3 +104,14 @@
     color: green;
 
 }
+
+/* .fade-in-out-text {
+    animation: fadeInOut 1s;
+  } */
+  
+  /* @keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1;  }
+    100% { opacity: 0;  }
+  } */
+

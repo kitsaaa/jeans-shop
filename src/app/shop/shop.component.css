@@ -3,3 +3,15 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     /* margin: 5em 20em; */
 }
+
+#loading {
+    position: absolute;
+    top: 40%;
+    right: 45%;
+}
+
+#load {
+    position: absolute;
+    top: 40%;
+    right: 45%;
+}

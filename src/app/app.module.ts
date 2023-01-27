@@ -8,13 +8,15 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ShopComponent } from './shop/shop.component';
 import { ItemComponent } from './item/item.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ItemDetailesComponent } from './item-detailes/item-detailes.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemInCartComponent } from './item-in-cart/item-in-cart.component';
 import { TotalPriceComponent } from './total-price/total-price.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -32,13 +34,17 @@ import { TotalPriceComponent } from './total-price/total-price.component';
     CartComponent,
     ItemInCartComponent,
     TotalPriceComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
