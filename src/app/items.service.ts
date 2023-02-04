@@ -12,7 +12,7 @@ export class ItemsService {
   constructor(private http: HttpClient) { }
 
   async getPosts(page: number): Promise<Item[]> {
-    const data: any = await this.http.get<Item[]>("https://jeans-shop-api.vercel.app/api/posts?page=" + page + "&perPage=100").toPromise();
+    const data: any = await this.http.get<Item[]>("https://jeans-shop-api-updated.vercel.app/api/posts").toPromise();
     console.log(data)
     return data;
   }
