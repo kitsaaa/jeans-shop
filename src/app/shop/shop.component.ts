@@ -16,10 +16,12 @@ export class ShopComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     // this.val = "none";
     this.canDisplayData = false;
-    for (let i =0; i < 6; i++) {
-      this.items = this._itemsService.getPosts(1);
-      
-    }
+
+    this.items = this._itemsService.getPosts(1);
+
+    // while (this.items.message) {
+    //   this.items = this._itemsService.getPosts(1);
+    // }
     if (this.items) {
       this.canDisplayData = true;
     }
