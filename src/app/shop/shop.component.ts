@@ -13,11 +13,14 @@ export class ShopComponent implements OnInit {
 
   constructor(private _itemsService: ItemsService) { }
 
-  async ngOnInit(): Promise<void> {
+  ngOnInit() {
     // this.val = "none";
     this.canDisplayData = false;
 
-    this.items = this._itemsService.getPosts(1);
+    this._itemsService.getPosts(1).subscribe(data => {
+      this.items = data;
+      console.log(data);
+    }) 
 
     // while (this.items.message) {
     //   this.items = this._itemsService.getPosts(1);

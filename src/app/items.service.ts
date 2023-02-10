@@ -11,10 +11,16 @@ export class ItemsService {
 
   constructor(private http: HttpClient) { }
 
-  async getPosts(page: number): Promise<Item[]> {
-    const data: any = await this.http.get<Item[]>("https://jeans-shop-api-updated.vercel.app/api/posts").toPromise();
-    console.log(data)
-    return data;
+  // getPosts(page: number): Promise<Item[]> {
+  //   const data: any = this.http.get<Item[]>("https://jeans-shop-api-updated.vercel.app/api/posts/");
+  //   console.log(data)
+  //   return data;
+  // }
+
+  data: any;
+
+  getPosts(page: number) : Observable<Item[]> {
+    return this.http.get<Item[]>("https://jeans-shop-api-updated.vercel.app/api/posts/");
   }
 
   getPostById(id: string): Observable<Item> {
