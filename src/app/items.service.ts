@@ -24,18 +24,18 @@ export class ItemsService {
   }
 
   getPostById(id: string): Observable<Item> {
-    return this.http.get<Item>("https://jeans-shop-api.vercel.app/api/posts/" + id);
+    return this.http.get<Item>("https://jeans-shop-api-updated.vercel.app/api/posts/" + id);
   }
 
   newPost(data: Item): Observable<any> {
-    return this.http.post<any>(`https://jeans-shop-api.vercel.app/api/posts/`, data);
+    return this.http.post<any>(`https://jeans-shop-api-updated.vercel.app/api/posts/`, data);
   }
 
   updatePostById(id: string, data: Item): Observable<any> {
-    return this.http.put<any>(`https://jeans-shop-api.vercel.app/api/posts/${id}`, data);
+    return this.http.put<any>(`https://jeans-shop-api-updated.vercel.app/api/posts/${id}`, data);
   }
 
   deletePostById(id: string): Observable<any> {
-    return this.http.delete<any>(`https://jeans-shop-api.vercel.app/api/posts/${id}`);
+    return this.http.delete<any>(`https://jeans-shop-api-updated.vercel.app/api/posts/${id}`);
   }
 }
