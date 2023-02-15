@@ -2,7 +2,9 @@
     width: clamp(6em, 1em + 10vw, 14em);
     height: clamp(8em, 1em + 10vw, 16em);
 
-    margin: 5em;
+    /* margin: 5em; */
+
+    margin: 5em auto 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,13 +16,14 @@
 
 .item-img img {
     max-width: 100%;
-    max-height: clamp(4em, 1em + 10vw, 8em);
+    max-height: 10em;
 }
 .item-img {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 40%; 
+    max-height: 30%; 
+    
     }
 
 .item-description {

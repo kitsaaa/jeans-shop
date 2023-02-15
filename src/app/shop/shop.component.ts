@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemsService } from '../items.service';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-shop',
@@ -10,12 +11,17 @@ export class ShopComponent implements OnInit {
 
   items: any;
   canDisplayData: any;
+  isMenuOpen = false;
 
-  constructor(private _itemsService: ItemsService) { }
+  constructor(private _itemsService: ItemsService, private _menuService: MenuService) { }
 
   ngOnInit() {
     // this.val = "none";
     this.canDisplayData = false;
+
+    this._menuService.getValue().subscribe(val => {
+      this.isMenuOpen = val;
+    })
 
     this._itemsService.getPosts(1).subscribe(data => {
       this.items = data;

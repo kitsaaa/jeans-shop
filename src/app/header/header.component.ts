@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  
+  isMenuOpen = false;
+  constructor(private _menuService: MenuService) { }
 
   ngOnInit(): void {
+  }
+
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    this._menuService.setValue(this.isMenuOpen);
   }
 
 }

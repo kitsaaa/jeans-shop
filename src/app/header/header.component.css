@@ -15,6 +15,51 @@
     justify-content: center; */
     gap: 3em;
     /* border: 1px solid red; */
+    
+}
+
+.navMobile {
+    height: 80vh;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding-top: 3.5em;
+    gap: 3em;
+    font-size: 1.7rem;
+}
+
+#lastHl {
+    position: absolute;
+    top: 3.5em;
+    margin-left: 1em;
+}
+
+.navMobile a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
+.burger {
+    position: absolute;
+    top: 1em;
+   
+
+}
+
+@media screen and (max-width: 600px) {
+    #cart {
+        display: none;
+    }
+    .nav {
+        display: none;
+    }    
+    .is-open {
+        display: block;
+        position: absolute;
+    }
 }
 
 .vl {

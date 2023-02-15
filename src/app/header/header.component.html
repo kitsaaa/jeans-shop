@@ -1,7 +1,12 @@
 <div class="container">
 
+    <div class="burger" (click)="toggleMenu()">
+        <i class="material-icons">{{isMenuOpen ? "close" : "menu"}}</i>
+    </div>
 
-    <div class="nav">
+    
+
+    <div class="nav" >
         <a routerLink="/home">Home</a>
         <div class="vl"></div>
         <a routerLink="/shop">Shop</a>
@@ -10,6 +15,13 @@
         <div class="vl"></div>
         <a routerLink="/contact">Contact</a>
     </div>
-    <i id="cart" routerLink="/cart" class="fa-solid fa-bag-shopping"></i>
+    <i id="cart"  routerLink="/cart" class="fa-solid fa-bag-shopping"></i>
+    <div *ngIf="isMenuOpen" class="navMobile">
+        <a routerLink="/home" (click)="toggleMenu()">Home</a>
+        <a routerLink="/shop" (click)="toggleMenu()">Shop</a>
+        <a routerLink="/about" (click)="toggleMenu()">About</a>
+        <a routerLink="/contact" (click)="toggleMenu()">Contact</a>
+        <a routerLink="/cart" (click)="toggleMenu()">Bag</a>
+    </div>
 </div>
-<div class="hl"></div>
+<div id="lastHl" class="hl"></div>

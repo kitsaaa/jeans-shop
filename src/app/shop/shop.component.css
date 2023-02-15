@@ -4,6 +4,21 @@
     /* margin: 5em 20em; */
 }
 
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* margin: 5em 20em; */
+        margin: 0;
+    }
+
+    #load {
+        margin-left: 100em;
+    }
+}
+
 #loading {
     position: absolute;
     top: 40%;
@@ -15,3 +30,5 @@
     top: 40%;
     right: 45%;
 }
+
+
