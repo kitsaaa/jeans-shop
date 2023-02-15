@@ -4,6 +4,7 @@ import { CartService } from '../cart.service';
 import { Item } from '../Item';
 import { ItemsService } from '../items.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-item-detailes',
@@ -23,6 +24,7 @@ export class ItemDetailesComponent implements OnInit {
   text = 'Added to cart';
   textState = 'out';
   animateState = false;
+  isMenuOpen = false;
 
   animateText() {
     
@@ -38,9 +40,14 @@ export class ItemDetailesComponent implements OnInit {
   status: any;
   finished: any;
 
-  constructor(private _itemsService: ItemsService, private route: ActivatedRoute, private _cartService: CartService) { }
+  constructor(private _itemsService: ItemsService, private route: ActivatedRoute, private _cartService: CartService, private _menuService: MenuService) { }
 
   ngOnInit(): void {
+
+    this._menuService.getValue().subscribe(val => {
+      this.isMenuOpen = val;
+    })
+
     this.route.params.subscribe(params =>{
       //TODO: Get post by Id params['id'] and store the result in this.post
       console.log(params['id']);

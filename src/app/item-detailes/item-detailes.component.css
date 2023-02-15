@@ -83,6 +83,12 @@
 
 .img img {
     max-height: 45vh;
+    max-width: 90%;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
 }
 
 .container button {

@@ -6,7 +6,7 @@
     <div class="container" *ngIf="items; else loading">
         <app-item *ngFor = "let item of items" [item]="item"></app-item>
     </div>
-    <ng-template #loading>
+    <ng-template class="loadContainer" #loading>
         <h2 id="load">Loading...</h2>
     </ng-template>
     

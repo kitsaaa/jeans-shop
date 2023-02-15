@@ -1,13 +1,17 @@
-<div *ngIf="item.images[0]" class="container">
-    <div  class="img">
-        <img src={{item.images[0]}} alt="img">
+<div class="outerContainer" *ngIf="!isMenuOpen">
+    <div *ngIf="item.images[0]" class="container">
+        <div  class="img">
+            <img src={{item.images[0]}} alt="img">
+        </div>
+        <h1>{{item.title}}</h1>
+        <h2>{{item.price}}$</h2>
+        <p>{{item.about}}</p>
+        <button (click)="cartBtnClicked()"><b>Add to cart</b> </button>
+        <div class="statusContainer">
+            <p *ngIf="animateState" id="status" [@fadeInOutText]="textState">{{text}}</p>
+    
+        </div>
     </div>
-    <h1>{{item.title}}</h1>
-    <h2>{{item.price}}$</h2>
-    <p>{{item.about}}</p>
-    <button (click)="cartBtnClicked()"><b>Add to cart</b> </button>
-    <div class="statusContainer">
-        <p *ngIf="animateState" id="status" [@fadeInOutText]="textState">{{text}}</p>
-
-    </div>
+    
 </div>
+

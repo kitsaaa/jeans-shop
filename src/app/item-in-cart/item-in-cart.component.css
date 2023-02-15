@@ -1,6 +1,6 @@
 .container {
     height: 13vh;
-    width: 50vw;
+    width: 70vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -20,7 +20,7 @@
 }
 
 .image img {
-    max-width: 60%;
+    max-width: 100%;
     max-height: clamp(2em, 1em + 10vw, 4em);
 }
 .image {
@@ -29,20 +29,29 @@
     justify-content: center;
     max-height: 40%; 
     width: 20%;
+    margin-right: 1em;
 }
 
 .price {
     display: flex;
     flex-direction: column;
     text-align: right;
+    gap: -1em;
+    /* border: 1px solid red; */
 }
 
 #remove {
-    width: fit-content;
-    margin-left: 1.3em;
+    width: 5em;
+    /* margin-left: 1.3em; */
 }
 
 #remove:hover {
     border-bottom: 1px solid black;
     /* text-decoration: underline; */
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        width: 50vw;
+    }
 }

@@ -1,25 +1,28 @@
-<div class="container">
-    <h2 id="title">Shopping Cart</h2>
-    <div class="cart">
-        <div class="headline">
-            <p id="item">Item</p>
-            <p>Total</p>
-        </div>
-        <div class="hl"></div>
-        <!-- <div class="item">
-            <div class="img">
-                <img src={{item.}} alt="">
+<div class="container" *ngIf="!isMenuOpen">
+    <div class="innerContainer">
+        <h2 id="title">Shopping Cart</h2>
+        <div class="cart">
+            <div class="headline">
+                <p id="item">Item</p>
+                <p>Total</p>
             </div>
-        </div> -->
-        <div class="items">
-            <app-item-in-cart *ngFor="let item of items" [totalPrice]="totalPrice" (priceChanged)="totalPrice=$event" [item]="item"></app-item-in-cart>
-        </div>
-        <div class="hl"></div>
-        <div class="total">
-            <p>Order Total</p>
-            <p id="total">${{totalPrice}} CAD</p>
-
-            <!-- <app-total-price [totalPrice]="totalPrice"></app-total-price> -->
+            <div class="hl"></div>
+            <!-- <div class="item">
+                <div class="img">
+                    <img src={{item.}} alt="">
+                </div>
+            </div> -->
+            <div class="items">
+                <app-item-in-cart *ngFor="let item of items" [totalPrice]="totalPrice" (priceChanged)="totalPrice=$event" [item]="item"></app-item-in-cart>
+            </div>
+            <div class="hl"></div>
+            <div class="total">
+                <p>Order Total</p>
+                <p id="total">${{totalPrice}} CAD</p>
+    
+                <!-- <app-total-price [totalPrice]="totalPrice"></app-total-price> -->
+            </div>
         </div>
     </div>
+    
 </div>
