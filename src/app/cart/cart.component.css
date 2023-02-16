@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    margin-left: -2em;
 }
 
 .headline {
@@ -18,10 +18,13 @@
     flex-direction: row;
     justify-content: space-between;
     width: 50vw;
+
+
 }
 
 #title {
     padding-top: 3em;
+    margin-left: 1em;
 }
 
 #item {
@@ -61,9 +64,9 @@
         width: 70vw;
     }
     .innerContainer {
-        margin-left: 5em;
+        /* margin-left: 5em; */
     }
     #title {
-        margin-left: -3em;
+        /* margin-left: -3em; */
     }
 }

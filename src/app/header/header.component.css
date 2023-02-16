@@ -30,11 +30,11 @@
     font-size: 1.7rem;
 }
 
-#lastHl {
+/* #lastHl {
     position: absolute;
     top: 3.5em;
-    margin-left: 1em;
-}
+    
+} */
 
 .navMobile a {
     color: inherit;
@@ -69,10 +69,11 @@
 }
 
 .hl {
-    width: 90%;
+    width: 96%;
     height: 1px;
     background-color: rgb(153, 153, 153);
-    margin: 0 auto;
+    margin: auto;
+    /* margin: 0 auto; */
 }
 
 .nav a {
